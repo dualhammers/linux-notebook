@@ -121,7 +121,8 @@ rclone mount remote:/ ~/(FOLDERNAME)/ --vfs-cache-mode writes`
 
 ```
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl```
+sudo chmod a+rx /usr/local/bin/youtube-dl
+```
 
 // Single
 `youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=sfIls6LMAGE`
