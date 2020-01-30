@@ -83,12 +83,15 @@ eyeD3 -a "Artist" -A "Album" -t "Track Title" song.mp3
 eyeD3 song.mp3
 ```
 
+#### Update Music Script
 ```
 #!/bin/bash
 cmus-remote -C clear
 cmus-remote -C "add ~/Music"
 cmus-remote -C "update-cache -f"
 ```
+`chmod +x your-script.sh`
+`:bind -f common u shell ~/path/to/your-script.sh`
 
 ### Copy image to clipboard
 
