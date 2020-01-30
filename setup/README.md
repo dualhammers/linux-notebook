@@ -56,15 +56,11 @@ RClone
 
 ### Custom Startup Applications
 
-```
-gnome-session-properties
-```
+`gnome-session-properties`
 
 #### Run a custom command at startup
 
-```
-sh ~/.local/bin/COMMAND.sh
-```
+`sh ~/.local/bin/COMMAND.sh`
 
 
 ### NNN
@@ -85,6 +81,13 @@ sudo n stable
 pip install eyeD3
 eyeD3 -a "Artist" -A "Album" -t "Track Title" song.mp3
 eyeD3 song.mp3
+```
+
+```
+#!/bin/bash
+cmus-remote -C clear
+cmus-remote -C "add ~/Music"
+cmus-remote -C "update-cache -f"
 ```
 
 ### Copy image to clipboard
@@ -118,11 +121,11 @@ rclone mount remote:/ ~/(FOLDERNAME)/ --vfs-cache-mode writes`
 
 ```
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl```
 
 // Single
-youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=sfIls6LMAGE
+`youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=sfIls6LMAGE`
 
 // Playlist
-youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=5KpK7yhDRXE&list=PLfGibfZATlGq4e4UsUiPLs3asiOqysjei'
+`youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=5KpK7yhDRXE&list=PLfGibfZATlGq4e4UsUiPLs3asiOqysjei'`
 ```
