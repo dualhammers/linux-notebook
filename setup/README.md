@@ -6,7 +6,7 @@ Notes on my current linux setup how to get it set up how I want it.
 
 ### Distro
 
-Elementary OS 5.0 Juno
+Manjaro 
 
 ### Shell
 
@@ -36,20 +36,21 @@ Blender
 Krita
 Glimpse
 Ronin
-KdenLive
 
 ### Screenshot tool
 
-Flameshot
 
 ### Misc Applications
-
+XBkindKey
 youtube-dl
 EyeD3
 Left
 Sublime3
 Calibre
-RClone
+
+### Website Toolchain
+[MDBook](https://rust-lang.github.io/mdBook/index.html)
+[Book-Summary](https://github.com/dvogt23/book-summary)
 
 
 ## Configuration
@@ -62,6 +63,20 @@ RClone
 
 `sh ~/.local/bin/COMMAND.sh`
 
+### Git
+#### Switching Branches
+
+`git switch name` if maintaining one orign, will try and create it if not extant
+`git switch -c name origin/name` 
+`git branch name` - creates a branch
+`git checkout -b name` - checkouts a new branch
+` git push -u origin branch_name` - Sets up tracking information during push to remote
+
+### mdBook
+`mdbook build` - build a book
+`mdbook clean` - delete the generated book and any other artifacts
+#### Book Summary
+`book-summary -n ./SOURCEFOLDER --sort ENTRIES TO START WITH`
 
 ### NNN
 
@@ -128,7 +143,30 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 
 **// Single**
-`youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=sfIls6LMAGE`
+`youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=Np5oq9sHYz8`
 
 **// Playlist**
 `youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" 'https://www.youtube.com/watch?v=5KpK7yhDRXE&list=PLfGibfZATlGq4e4UsUiPLs3asiOqysjei'`
+
+### XBindKey
+#### Elecom Mouse Keys
+- Right2: 12
+- Forward: 9
+- Backward: 8
+- Fn1: 10
+- Fn2: 11
+
+## Tips and Tricks
+
+### Creating a Launcher 
+
+#### Manjaro
+- Right click on desktop >> Create Launcher
+`sudo mv Desktop/lancher.desktop /usr/share/applications`
+
+### Formatting a drive to exFat
+https://forum.manjaro.org/t/how-to-format-a-usb-stick-so-that-it-is-usable-on-manjaro-windows-and-macos/3972
+
+### Create Sym Links
+`rm -r ~/Folder`
+`ln -s /data/location ~/folder`
