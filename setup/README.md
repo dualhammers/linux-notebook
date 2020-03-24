@@ -14,7 +14,7 @@ Fish
 
 ### File Manager
 
-**GUI:** Files
+**GUI:** Thurnar
 **TUI:** NNN
 
 ### Terminal Editor
@@ -77,6 +77,12 @@ Calibre
 `mdbook clean` - delete the generated book and any other artifacts
 #### Book Summary
 `book-summary -n ./SOURCEFOLDER --sort ENTRIES TO START WITH`
+
+### Fish
+#### Change Shell to Fish
+`chsh -l`
+`$ chsh -s full-path-to-shell`
+
 
 ### NNN
 
@@ -156,7 +162,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 - Fn1: 10
 - Fn2: 11
 
-## Tips and Tricks
+## Tips and Trickss
 
 ### Creating a Launcher 
 
@@ -170,3 +176,10 @@ https://forum.manjaro.org/t/how-to-format-a-usb-stick-so-that-it-is-usable-on-ma
 ### Create Sym Links
 `rm -r ~/Folder`
 `ln -s /data/location ~/folder`
+
+### Managing Remote Drives
+
+#### Mounting a remote drive for use as a regular drive
+- `lsblk -a -o uuid,name,mountpoint`
+- Add drive to `/etc/fstab`
+
