@@ -19,7 +19,7 @@ Fish
 
 ### Terminal Editor
 
-Micro
+[Micro](https://micro-editor.github.io/about.html)
 
 ### Music Player
 
@@ -47,6 +47,7 @@ EyeD3
 Left
 Sublime3
 Calibre
+EBR3
 
 ### Website Toolchain
 [MDBook](https://rust-lang.github.io/mdBook/index.html)
@@ -80,6 +81,7 @@ Calibre
 
 ### Fish
 #### Change Shell to Fish
+
 `chsh -l`
 `$ chsh -s full-path-to-shell`
 
@@ -182,4 +184,8 @@ https://forum.manjaro.org/t/how-to-format-a-usb-stick-so-that-it-is-usable-on-ma
 #### Mounting a remote drive for use as a regular drive
 - `lsblk -a -o uuid,name,mountpoint`
 - Add drive to `/etc/fstab`
+
+### Nvidia Prime
+With a descrete hybrid laptop card nvidia-prime is used on linux to switch between the iGPU and dGPU
+`prime-run APPLICATION` is required to set any program to use the dGPU
 
